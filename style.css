@@ -1,0 +1,78 @@
+body  {
+    font-family: "Sawarabi Mincho";
+    font-size: 12pt;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self: flex-start;
+    max-width: 700px;
+    margin: 2em auto;
+}
+
+#content {
+    padding: 2em; 
+    background-color: chocolate;
+    border-radius: 1em;
+    width: calc((100% - 8em) * 2 / 3);
+}
+
+#timesList {
+    padding: 2em; 
+    background-color: chocolate;
+    border-radius: 1em;
+    margin-left: 1em;
+    width: calc((100% - 8em) / 3 - 1.5em);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: #ffaf76;
+}
+
+#elapsedTime {
+    font-family: "Nova Mono";
+    font-size: 6em;
+    text-align: right;
+    color: #f3c09c;
+    margin: 0.5em auto;
+}
+
+#timerControl {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+button {
+    display: block;
+    width: 25%;
+    height: 48px;
+    margin: 0.5em;
+    padding: 0.5em;
+    background-color: #f3c09c;
+    border: #ffaf76 solid thin;
+    color: #7a3300;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #da8b53;
+    color: #fff;
+}
+
+#pastTimes {
+    padding: 0.5em;
+    background-color: #f3c09c;
+    color: #7a3300;
+    height: 240px;
+    text-align: right;
+    border-radius: 12px;
+}

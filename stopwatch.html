@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Stopwatch Demo</title>
+  <meta charset="UTF-8">
+  <title>Stopwatch Demo</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Sawarabi+Mincho" rel="stylesheet">
+
 </head>
+
 <body>
-    <h1>Stopwatch Demo</h1>
-    <p id="elapsedTime">0</p>
-    <p>
+  <div id="container">
+    <div id="content">
+      <h1>Stopwatch Demo</h1>
+      <p id="elapsedTime">0.00</p>
+      <p id="timerControl">
         <button id="startBtn">Start/Stop</button>
         <button id="resetBtn">Reset</button>
         <button id="recordBtn">Record Time</button>
-    </p>
-    <p>Past Times</p>
-    <div id="pastTimes"></div>
+      </p>
+    </div>
+    <div id="timesList">
+      <h1>Past Times</h1>
+      <div id="pastTimes"></div>
+    </div>
+  </div>
 
-    <script src="stopwatch.js"></script>
+  <script src="stopwatch.js"></script>
 </body>
+
 </html>

@@ -3,6 +3,7 @@ var elapsedTime = 0;
 var timerStarted = false;
 var lastRecorded = null;
 var interval = null;
+var timeCount = 0;
 
 function setup() {
     document.getElementById('startBtn').addEventListener('click', function() {
@@ -40,19 +41,21 @@ function stopTimer() {
 }
 
 function appendPastTime(elapsedTime) {
-    if (!lastRecorded || (lastRecorded && elapsedTime != lastRecorded)) {
+    if (!lastRecorded || (lastRecorded && elapsedTime != lastRecorded && timeCount < 10)) {
         document.getElementById('pastTimes').innerHTML += '<div>' + elapsedTime.toFixed(2) + '</div>';
         lastRecorded = elapsedTime;
+        timeCount++;
     }
 }
 
 
 function resetAll() {
-    document.getElementById('elapsedTime').innerText = '0';
+    document.getElementById('elapsedTime').innerText = '0.00';
     document.getElementById('pastTimes').innerHTML = '';
 
     stopTimer();
 
+    timeCount = 0;
     elapsedTime = 0;
     lastRecorded = null;
     timerStarted = false;
